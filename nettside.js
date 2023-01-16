@@ -18,6 +18,7 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+  /*Kilde: https://www.w3schools.com/howto/howto_js_tabs.asp*/
 
 const resources = [
     {
