@@ -48,9 +48,7 @@ main {
 
 
 .tab {
-    overflow: hidden;
     padding: 0 330px;
-
   }
   
   .tab button {
