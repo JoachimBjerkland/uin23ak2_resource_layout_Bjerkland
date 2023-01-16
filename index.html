@@ -10,13 +10,27 @@
 <header>
 <h1>Ressursarkiv</h1>
 </header>
-<main>
     <div class="tab">
-        <button class="tablinks" onclick="resources(event, 'Kategori 1')">Kategori 1</button>
-        <button class="tablinks" onclick="resources(event, 'Kategori 2')">Kategori 2</button>
-        <button class="tablinks" onclick="resources(event, 'Kategori 3')">Kategori 3</button>
+        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
       </div>
-</main>
+      
+      <!-- Tab content -->
+      <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
 
     <script src="nettside.js"></script>
 </body>
