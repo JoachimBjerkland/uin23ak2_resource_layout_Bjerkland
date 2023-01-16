@@ -40,6 +40,8 @@ header {
     cursor: pointer;
     padding: 25px 45px;
     transition: 0.3s;
+    text-align: center;
+    text-transform: uppercase;
   }
   
   .tab button:hover {
