@@ -11,34 +11,57 @@
 <h1>Ressursarkiv</h1>
 </header>
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'HTML')">HTML</button>
-        <button class="tablinks" onclick="openCity(event, 'CSS')">CSS</button>
-        <button class="tablinks" onclick="openCity(event, 'JavaScript')">JavaScript</button>
-        <button class="tablinks" onclick="openCity(event, 'JavaScript')">React</button>
-        <button class="tablinks" onclick="openCity(event, 'Sanity and headless CMS')">Sanity and headless CMS</button>
+        <button class="tablinks" onclick="openCity(event, 'London')">HTML</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">CSS</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">JavaScript</button>
+        <button class="tablinks" onclick="openCity(event, 'Oslo')">React</button>
+        <button class="tablinks" onclick="openCity(event, 'Copenhagen')">Sanity and headless CMS</button>
       </div>
-    
-<script>
+      
+      <!-- Tab content -->
+      <div id="London" class="tabcontent">
+        <h3>HTML</h3>
+        <p>HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.</p>
+        <a href="url">link text</a>  
+        <a href="url">link text</a>
+        <a href="url">link text</a>
 
-        let menuHTML = `<ul>
-        <li><a href=''>Home</a></li>
-        </ul>`
+    </div>
+      
+      <div id="Paris" class="tabcontent">
+        <h3>CSS</h3>
+        <p>CSS står for Cascading StyleSheets, og brukes for å sette stilregler på HTML-elementer.</p>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
 
-        resources.map(links => {     
-              
-          menuHTML += `<h2>${links.menuheader}</h2><ul>`
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h3>JavaScript</h3>
+        <p>JavaScript er et scriptspråk basert på EcmaScript. JavaScript kjører direkte i nettleseren, og brukes ofte til å manipulere HTML og CSS i webgrensnesnitt.</p>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
 
-          links.menulinks.map(link => {
+      </div>
 
+      <div id="Oslo" class="tabcontent">
+        <h3>React</h3>
+        <p>React er et rammeverk bygget i JavaScript. React bruker komponenter og states for å lage en levende frontend.</p>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
 
-          menuHTML += `<li><a href='${link.url}'>${link.menutext}</a></li>`
-    })
-          menuHTML += `</ul>`  
+      </div>
 
-          document.querySelector('nav').innerHTML = menuHTML
-        })
-
-</script>
+      <div id="Copenhagen" class="tabcontent">
+        <h3>Sanity and headless CMS</h3>
+        <p>Sanity er et headless CMS som står for innholdsadministrasjon. Innhold hentes inn i applikasjoner via GROQ-spørringer.</p>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+      </div>
       <!--Kilde: https://www.w3schools.com/howto/howto_js_tabs.asp-->
 
     <script src="nettside.js"></script>
