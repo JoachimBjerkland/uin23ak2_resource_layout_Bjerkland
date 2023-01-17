@@ -20,6 +20,30 @@ function openCity(evt, cityName) {
   }
   /*Kilde: https://www.w3schools.com/howto/howto_js_tabs.asp*/
 
+/*const htmlTab = document.getElementById("html-tab");
+const htmlContent = document.getElementById("html-content");
+
+function openCity(evt, tabId) {
+    // Hide all tab content
+    const tabContent = document.getElementsByClassName("tabcontent");
+    for (let i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+    }
+
+    // Remove the "active" class from all tab buttons
+    const tabLinks = document.getElementsByClassName("tablinks");
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab content
+    document.getElementById(tabId).style.display = "block";
+
+    // Add the "active" class to the current tab button
+    evt.currentTarget.className += " active";
+}*/
+
+
 const resources = [
     {
         category: "HTML",
