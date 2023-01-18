@@ -10,6 +10,7 @@
 <header>
 <h1>Ressursarkiv</h1>
 </header>
+
 <div class="tab">
   <button class="tab-buttons" data-tab="tab1">Html</button>
   <button class="tab-buttons" data-tab="tab2">Css</button>
@@ -18,29 +19,32 @@
   <button class="tab-buttons" data-tab="tab5">Sanity and Headless Cms</button>
 </div>
 
+<!-- Kilde: https://stackoverflow.com/questions/25014849/how-to-set-the-size-of-button-in-html -->
+
 <div class="tab">
   <div class="tab-content" id="tab1">
-    <!-- Tab HTML -->
+    <!-- Fane for HTML -->
   </div>
   <div class="tab-content" id="tab2">
-    <!-- Tab CSS -->
+    <!-- Fane for CSS -->
   </div>
   <div class="tab-content" id="tab3">
-    <!-- Tab JavaScript -->
+    <!-- Fane for JavaScript -->
   </div>
   <div class="tab-content" id="tab4">
-    <!-- Tab React -->
+    <!-- Fane for React -->
   </div>
   <div class="tab-content" id="tab5">
-    <!-- Tab Sanity and Headless CMS -->
+    <!-- Fane for Sanity and Headless CMS -->
   </div>
 </div>
+<!-- Kilde: https://www.dofactory.com/html/div/id -->
 
 <script>
 const tabButtons = document.querySelectorAll('.tab-buttons');
 const tabContents = document.querySelectorAll('.tab-content');
 
-//https://www.w3schools.com/JSREF/met_document_queryselectorall.asp
+//Kilde: https://www.w3schools.com/JSREF/met_document_queryselectorall.asp
 
 tabButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
@@ -65,6 +69,13 @@ tabButtons.forEach((button, index) => {
     });
   });
 });
+//Kilde: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+//Kilde: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+//Kilde: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button
+//Kilde: https://www.w3schools.com/bootstrap/bootstrap_buttons.asp
+//Kilde: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+//Kilde: https://www.w3schools.com/howto/howto_js_active_element.asp
+//Kilde: https://stackoverflow.com/questions/55933647/how-do-i-add-a-a-element-with-a-href-attribut-in-multiple-li-element
 
 
 
@@ -74,5 +85,6 @@ tabButtons.forEach((button, index) => {
       <!--Kilde: https://www.w3schools.com/howto/howto_js_tabs.asp -->
 
     <script src="ressurser.js"></script>
+    <!-- Kilde: https://www.w3schools.com/tags/tag_script.asp -->
 </body>
 </html>
