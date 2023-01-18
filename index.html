@@ -38,7 +38,7 @@
 
 <script>
 const tabButtons = document.querySelectorAll('.tab-buttons');
-const tabContents = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tab-content');
 
 //https://www.w3schools.com/JSREF/met_document_queryselectorall.asp
 
@@ -48,20 +48,25 @@ tabButtons.forEach((button, index) => {
 
     tabButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
-    tabContents.forEach(content => content.classList.remove('active'));
 
-    const currentTab = document.getElementById(tabId);
-    currentTab.classList.add('active');
-    
-    currentTab.innerHTML = `
-      <h2>${resources[index].category}</h2>
-      <p>${resources[index].text}</p>
-      <ul>
-        ${resources[index].sources.map(sources => `<li><a href="${sources.url}">${sources.title}</a></li>`).join('')}
-      </ul>
-    `;
+    tabContents.forEach(content => {
+      if (content.id === tabId) {
+        content.classList.add('active');
+        content.innerHTML = `
+          <h2>${resources[index].category}</h2>
+          <p>${resources[index].text}</p>
+          <ul>
+            ${resources[index].sources.map(sources => `<li><a href="${sources.url}">${sources.title}</a></li>`).join('')}
+          </ul>
+        `;
+      } else {
+        content.classList.remove('active');
+      }
+    });
   });
 });
+
+
 
 </script>
 
