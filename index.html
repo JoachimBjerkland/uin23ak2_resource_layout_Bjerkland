@@ -10,71 +10,54 @@
 <header>
 <h1>Ressursarkiv</h1>
 </header>
-    <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'HTML')">HTML</button>
-        <button class="tablinks" onclick="openCity(event, 'CSS')">CSS</button>
-        <button class="tablinks" onclick="openCity(event, 'JavaScript')">JavaScript</button>
-        <button class="tablinks" onclick="openCity(event, 'React')">React</button>
-        <button class="tablinks" onclick="openCity(event, 'Sanity and headless CMS')">Sanity and headless CMS</button>
-      </div>
+<div class="tab">
+  <button class="tab-buttons" data-tab="tab1">HTML</button>
+  <button class="tab-buttons" data-tab="tab2">CSS</button>
+  <button class="tab-buttons" data-tab="tab3">JavaScript</button>
+  <button class="tab-buttons" data-tab="tab4">React</button>
+  <button class="tab-buttons" data-tab="tab5">Sanity and Headless CMS</button>
+</div>
 
-      <!--<div class="tab">
-        <button id="html-tab" class="tablinks" onclick="openCity(event, 'html-content')">HTML</button>
-        <div id="html-content" class="tabcontent">...</div>
-        <button id="css-tab" class="tablinks" onclick="openCity(event, 'css-content')">CSS</button>
-        <div id="css-content" class="tabcontent">...</div>
-        <button id="javaScript-tab" class="tablinks" onclick="openCity(event, 'javaScript-content')">JavaScript</button>
-        <div id="javaScript-content" class="tabcontent">...</div>
-        <button id="react-tab" class="tablinks" onclick="openCity(event, 'react-content')">React</button>
-        <div id="react-content" class="tabcontent">...</div>
-        <button id="sanity-and-headless-cms-tab" class="tablinks" onclick="openCity(event, 'sanity-and-headless-cms-content')">Sanity and headless CMS</button>
-        <div id="sanity-and-headless-cms-content" class="tabcontent">...</div>
-      </div> -->
-      
-      <!-- Tab content -->
-      <div id="HTML" class="tabcontent">
-        <h3>HTML</h3>
-        <p>HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.</p>
-        <a href="url">link text</a>  
-        <a href="url">link text</a>
-        <a href="url">link text</a>
+<div class="tab-content">
+  <div class="tab" id="tab1">
+    <!-- Tab for HTML -->
+  </div>
+  <div class="tab" id="tab2">
+    <!-- Tab for CSS -->
+  </div>
+  <div class="tab" id="tab3">
+    <!-- Tab for JavaScript -->
+  </div>
+  <div class="tab" id="tab4">
+    <!-- Tab for React -->
+  </div>
+  <div class="tab" id="tab5">
+    <!-- Tab for Sanity and Headless CMS -->
+  </div>
+</div>
+<script>
+const tabButtons = document.querySelectorAll('.tab-buttons');
+const tabContents = document.querySelectorAll('.tab');
 
-    </div>
-      
-      <div id="CSS" class="tabcontent">
-        <h3>CSS</h3>
-        <p>CSS står for Cascading StyleSheets, og brukes for å sette stilregler på HTML-elementer.</p>
-        <a href="url">link text</a>
-        <a href="url">link text</a>
-        <a href="url">link text</a>
+tabButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    tabContents.forEach(content => content.classList.remove('active'));
+    tabContents[index].classList.add('active');
 
-      </div>
-      
-      <div id="JavaScript" class="tabcontent">
-        <h3>JavaScript</h3>
-        <p>JavaScript er et scriptspråk basert på EcmaScript. JavaScript kjører direkte i nettleseren, og brukes ofte til å manipulere HTML og CSS i webgrensnesnitt.</p>
-        <a href="url">link text</a>
-        <a href="url">link text</a>
-        <a href="url">link text</a>
+    tabContents[index].innerHTML = `
+      <h2>${resources[index].category}</h2>
+      <p>${resources[index].text}</p>
+      <ul>
+        ${resources[index].sources.map(sources => `<li><a href="${sources.url}">${sources.title}</a></li>`).join('')}
+      </ul>
+    `;
+  });
+});
+</script>
 
-      </div>
 
-      <div id="React" class="tabcontent">
-        <h3>React</h3>
-        <p>React er et rammeverk bygget i JavaScript. React bruker komponenter og states for å lage en levende frontend.</p>
-        <a href="url">link text</a>
-        <a href="url">link text</a>
-        <a href="url">link text</a>
-
-      </div>
-
-      <div id="Sanity and headless CMS" class="tabcontent">
-        <h3>Sanity and headless CMS</h3>
-        <p>Sanity er et headless CMS som står for innholdsadministrasjon. Innhold hentes inn i applikasjoner via GROQ-spørringer.</p>
-        <a href="url">link text</a>
-        <a href="url">link text</a>
-        <a href="url">link text</a>
-      </div>
       <!--Kilde: https://www.w3schools.com/howto/howto_js_tabs.asp-->
 
     <script src="nettside.js"></script>
