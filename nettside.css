@@ -32,19 +32,20 @@ header {
 }
 
 .tab {
-    padding: 14px 350px;
+    padding: 30px 350px;
     display: block;
   }
   
   .tab button {
     cursor: pointer;
-    padding: 25px 45px;
+    padding: 25px 50px;
     transition: 0.3s;
     text-align: center;
     color: var(--black);
     text-transform: uppercase;
-
+    margin-right: 10px; 
   }
+  /*https://stackoverflow.com/questions/9792849/how-to-insert-spaces-tabs-in-text-using-html-css*/
 
   .tab.active {
     visibility: visible;
@@ -64,7 +65,7 @@ header {
     background: var(--white);
     display: none;
     padding: 100px 12px;
-    margin-top: -30px;
+    margin-top: -60px;
     border-top: 8px solid var(--blue);
     border-bottom: 1px solid var(--grey);
     border-right: 1px solid var(--grey);
