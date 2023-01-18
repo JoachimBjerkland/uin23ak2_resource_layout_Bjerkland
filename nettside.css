@@ -7,6 +7,9 @@
     --rootsize: 20px;
 }
 
+header {
+  text-transform: uppercase;
+}
 
 body {
     background-color: var(--white);
@@ -17,7 +20,6 @@ body {
     padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-    text-transform: uppercase;
 }
 
 
@@ -33,7 +35,6 @@ header {
 .tab {
     padding: 14px 350px;
     display: block;
-
   }
   
   .tab button {
@@ -41,7 +42,6 @@ header {
     padding: 25px 45px;
     transition: 0.3s;
     text-align: center;
-    text-transform: uppercase;
     color: var(--black);
 
   }

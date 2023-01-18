@@ -11,11 +11,11 @@
 <h1>Ressursarkiv</h1>
 </header>
 <div class="tab">
-  <button class="tab-buttons" data-tab="tab1">HTML</button>
-  <button class="tab-buttons" data-tab="tab2">CSS</button>
+  <button class="tab-buttons" data-tab="tab1">Html</button>
+  <button class="tab-buttons" data-tab="tab2">Css</button>
   <button class="tab-buttons" data-tab="tab3">JavaScript</button>
   <button class="tab-buttons" data-tab="tab4">React</button>
-  <button class="tab-buttons" data-tab="tab5">Sanity and Headless CMS</button>
+  <button class="tab-buttons" data-tab="tab5">Sanity and Headless Cms</button>
 </div>
 
 <div class="tab-content">
@@ -36,11 +36,11 @@
   </div>
 </div>
 <script>
-const tabButtons = document.querySelectorAll('.tab-buttons');
-const tabContents = document.querySelectorAll('.tab');
+    const tabButtons = document.querySelectorAll('.tab-buttons');
+    const tabContents = document.querySelectorAll('.tab');
 
-tabButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
+    tabButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
     tabButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
     tabContents.forEach(content => content.classList.remove('active'));
