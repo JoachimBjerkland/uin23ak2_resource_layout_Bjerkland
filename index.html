@@ -18,35 +18,40 @@
   <button class="tab-buttons" data-tab="tab5">Sanity and Headless Cms</button>
 </div>
 
-<div class="tab-content">
-  <div class="tab" id="tab1">
-    <!-- Tab for HTML -->
+<div class="tab">
+  <div class="tab-content" id="tab1">
+    <!-- Tab HTML -->
   </div>
-  <div class="tab" id="tab2">
-    <!-- Tab for CSS -->
+  <div class="tab-content" id="tab2">
+    <!-- Tab CSS -->
   </div>
-  <div class="tab" id="tab3">
-    <!-- Tab for JavaScript -->
+  <div class="tab-content" id="tab3">
+    <!-- Tab JavaScript -->
   </div>
-  <div class="tab" id="tab4">
-    <!-- Tab for React -->
+  <div class="tab-content" id="tab4">
+    <!-- Tab React -->
   </div>
-  <div class="tab" id="tab5">
-    <!-- Tab for Sanity and Headless CMS -->
+  <div class="tab-content" id="tab5">
+    <!-- Tab Sanity and Headless CMS -->
   </div>
 </div>
+
 <script>
 const tabButtons = document.querySelectorAll('.tab-buttons');
 const tabContents = document.querySelectorAll('.tab');
 
-    tabButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
+tabButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    const tabId = button.getAttribute('data-tab');
+
     tabButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
     tabContents.forEach(content => content.classList.remove('active'));
-    tabContents[index].classList.add('active');
 
-    tabContents[index].innerHTML = `
+    const currentTab = document.getElementById(tabId);
+    currentTab.classList.add('active');
+    
+    currentTab.innerHTML = `
       <h2>${resources[index].category}</h2>
       <p>${resources[index].text}</p>
       <ul>
@@ -55,6 +60,7 @@ const tabContents = document.querySelectorAll('.tab');
     `;
   });
 });
+
 </script>
 
 

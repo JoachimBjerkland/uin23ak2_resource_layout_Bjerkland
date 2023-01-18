@@ -48,6 +48,7 @@ header {
 
   .tab.active {
     visibility: visible;
+    display: block;
 }
   
   .tab button:hover {
@@ -59,16 +60,18 @@ header {
     color: var(--white);
   }
   
-  .tabcontent {
+  .tab-content {
     background: var(--white);
     display: none;
-    padding: 150px 12px;
-    margin-left: 350px;
-    margin-right: 600px;
-    margin-top: -15px;
+    padding: 100px 12px;
+    margin-top: -30px;
     border-top: 8px solid var(--blue);
     border-bottom: 1px solid var(--grey);
     border-right: 1px solid var(--grey);
     border-left: 1px solid var(--grey);
+  }
+
+  .tab-content.active{
+    display:block;
   }
   /*Kilde: https://www.w3schools.com/howto/howto_js_tabs.asp*/
